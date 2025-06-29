@@ -1,3 +1,4 @@
+
 import openai
 from openai import OpenAI
 
@@ -12,6 +13,25 @@ response = client.chat.completions.create(
 )
 
 print(response.choices[0].message.content)
+import streamlit as st
+import openai
+from openai import OpenAI
+
+st.title("AI Chatbot")
+
+client = OpenAI(api_key="your_api_key")
+
+user_input = st.text_input("Ask something:")
+if user_input:
+    response = client.chat.completions.create(
+        model="gpt-4",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": user_input}
+        ]
+    )
+    st.write(response.choices[0].message.content)
+
 
 import streamlit as st
 import openai
