@@ -1,5 +1,3 @@
-pip install --upgrade openai
-
 import openai
 from openai import OpenAI
 
