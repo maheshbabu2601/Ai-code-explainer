@@ -2,7 +2,7 @@
 import openai
 from openai import OpenAI
 
-client = OpenAI(api_key="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")  # Replace with your actual key
+client = OpenAI(api_key="sk-abc123-qw2NIvDhgxCmWZn8XnPAWl0wv4GEZQPVhKIOgQSn96lGZNtjL9sRyYlFG4ylkQBs9awsz6-kqVT3BlbkFJUezf3DBWm-dE_aaojujFBFJrQqzbn-SYneNcSYQSsyHj3EH39I3iZ66UkGJJhkLwABIC5O3CIA")  # Replace with your actual key
 
 response = client.chat.completions.create(
     model="gpt-4",
@@ -19,7 +19,7 @@ from openai import OpenAI
 
 st.title("AI Chatbot")
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="sk-abc123-qw2NIvDhgxCmWZn8XnPAWl0wv4GEZQPVhKIOgQSn96lGZNtjL9sRyYlFG4ylkQBs9awsz6-kqVT3BlbkFJUezf3DBWm-dE_aaojujFBFJrQqzbn-SYneNcSYQSsyHj3EH39I3iZ66UkGJJhkLwABIC5O3CIA")
 
 user_input = st.text_input("Ask something:")
 if user_input:
