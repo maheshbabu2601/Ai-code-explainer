@@ -1,3 +1,20 @@
+!pip install --upgrade openai
+
+import openai
+from openai import OpenAI
+
+client = OpenAI(api_key="your_api_key")  # Replace with your actual key
+
+response = client.chat.completions.create(
+    model="gpt-4",
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant."},
+        {"role": "user", "content": "Hello, who won the World Cup in 2018?"}
+    ]
+)
+
+print(response.choices[0].message.content)
+
 import streamlit as st
 import openai
 
